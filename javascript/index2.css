@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&family=Bruno+Ace+SC&family=Cabin:wght@700&family=Sigmar&display=swap');
+/* -----------------------NAV STYLE ----------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  box-sizing: border-box;
+}
+
+nav {
+  color: white;
+  background-color: #Cf365F;
+  background-color: rgba(0, 0, 0, 0.763);
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  z-index: 1000;
+}
+
+#logo a {
+  font-family: 'Bruno Ace SC', cursive;
+  letter-spacing: 4px;
+  color: white;
+  text-decoration: none;
+}
+
+#search-bar input {
+  height: 35px;
+  width: 450px;
+  border: none;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+
+#search-bar button {
+  height: 33px;
+  width: 80px;
+  border: none;
+  background-color: rgb(242, 239, 239);
+  border-radius: 10px;
+  transform: translate(-82px);
+  cursor: pointer;
+}
+
+#add-movie a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+#add-movie a:hover {
+  background-color: white;
+  color: #Cf365F;
+  border-radius: 10px;
+}
+
+.suggestion-box{
+  background-color: black;
+  color: white;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  position: absolute;
+  left: 27%;
+  top: 8%;
+  z-index: 222;
+}
+.suggestion-box ul{
+  list-style: none;
+  padding: 5%;
+}
+.suggestion-box ul li{
+  color: white;
+}
+.suggestion-box ul li:hover{
+  cursor: pointer;
+  background-color: gainsboro;
+  color: rgb(0, 0, 0);
+  transform: scale(1.05);
+
+}
+/* -----------------------HOME STYLE ----------------------------*/
+.home {
+  height: auto;
+}
+
+.all-movies {
+  width: 80vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  row-gap: 20px;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+#movie {
+  border-radius: 4px;
+  width: 250px;
+  height: auto;
+  padding: 25px;
+  background-color: white;
+
+}
+
+#inside-div {
+  width: 200px;
+
+}
+
+#movie img {
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 80%;
+
+}
+
+#movie:hover {
+  transform: scale(1.02);
+  transition: .2s ease-in-out;
+  box-shadow: 0px 0px 10px black;
+}
+
+/* -----------------Add movie --------------------- */
+#add-movie-c {
+  transform: translate(70%, 10%);
+  height: auto;
+  width: 40vw;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px palevioletred;
+}
+
+#add-movie-c h1 {
+  color: #Cf365F;
+  font-size: 40px;
+}
+
+#add-movie-c input {
+  width: auto;
+  height: 40px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+#add-movie-c input[type="checkbox"] {
+  height: 15px;
+  display: inline;
+}
+
+#add-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.err-line {
+  padding: 18% 25%;
+  color: rgba(186, 49, 49, 0.872);
+}
+
+/* loder */
+.lds-roller {
+  display: inline-block;
+  transform: translate(85%, 70%);
+  width: 50vw;
+  height: 40vh;
+  display: flex;
+  /* border: 2px solid red; */
+}
+
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #1ed811;
+  margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.movie-details h1:first-child {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+
+/* Movie details component */
+#movie-dtl-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.879);
+  color: white;
+}
+
+#movie-dtl-main img {
+  width: 650px;
+  height: auto;
+}
+
+#mov-dtl-cont {
+  height: auto;
+  width: 50vw;
+  transform: translate(20%);
+}
+
+#mov-dtl-cont h1 {
+  color: red;
+  font-size: 50px;
+  padding-right: 260px;
+}
+
+
+#mov-dtl-cont h2,
+h3,
+h4 {
+  padding-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+
+}
+
+#title {
+  background-color: rgb(241, 76, 76);
+  color: white;
+  text-align: center;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+#movie #filled-heart {
+  font-size: 25px;
+  color: red;
+  animation: emptyheart 0.5s;
+
+
+}
+
+#movie #empty-heart {
+  color: rgb(255, 0, 0);
+  animation: filledheart 0.5s;
+}
+
+#movie button {
+  border: none;
+  font-size: 25px;
+  background-color: white;
+
+
+}
+
+@keyframes filledheart {
+  0% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes emptyheart {
+  0% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
